@@ -259,8 +259,10 @@ namespace ManuBot
             int toComplete = times;
             while (true && completedGames != toComplete)
             {
+                
                 if (completedGames != previousGames)
                 {
+                    GamesDoneLbl.Invoke(new MethodInvoker(delegate { GamesDoneLbl.Text = $"{completedGames}/{toComplete}"; }));
                     Debug.WriteLine($"Minigames Done: {completedGames}/{toComplete}");
                     Debug.WriteLine("Attempts: " + attempts);
                     previousGames = completedGames;
@@ -414,8 +416,17 @@ namespace ManuBot
                 }
                 await Task.Delay(75);
             }
+            GamesDoneLbl.Invoke(new MethodInvoker(delegate { GamesDoneLbl.Text = $"{completedGames}/{toComplete}"; }));
 
+            if (shutdownCbox.Checked)
+                ShutdownPC();
             Debug.WriteLine("End of Minigames");
+        }
+
+
+        private static void ShutdownPC()
+        {
+            Process.Start("shutdown", "/s /t 0");
         }
 
 

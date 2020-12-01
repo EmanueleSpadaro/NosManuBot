@@ -32,6 +32,10 @@
             this.TestBtn = new System.Windows.Forms.Button();
             this.UpdaterTimer = new System.Windows.Forms.Timer(this.components);
             this.ClientNumberLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.GamesDoneLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.shutdownCbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // TestBtn
@@ -58,11 +62,53 @@
             this.ClientNumberLabel.TabIndex = 1;
             this.ClientNumberLabel.Text = "Client Number:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Games done:";
+            // 
+            // GamesDoneLbl
+            // 
+            this.GamesDoneLbl.AutoSize = true;
+            this.GamesDoneLbl.Location = new System.Drawing.Point(89, 31);
+            this.GamesDoneLbl.Name = "GamesDoneLbl";
+            this.GamesDoneLbl.Size = new System.Drawing.Size(29, 13);
+            this.GamesDoneLbl.TabIndex = 3;
+            this.GamesDoneLbl.Text = "NaN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Shutdown on finish:";
+            // 
+            // shutdownCbox
+            // 
+            this.shutdownCbox.AutoSize = true;
+            this.shutdownCbox.Checked = true;
+            this.shutdownCbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.shutdownCbox.Location = new System.Drawing.Point(119, 48);
+            this.shutdownCbox.Name = "shutdownCbox";
+            this.shutdownCbox.Size = new System.Drawing.Size(15, 14);
+            this.shutdownCbox.TabIndex = 5;
+            this.shutdownCbox.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(264, 114);
+            this.Controls.Add(this.shutdownCbox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.GamesDoneLbl);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ClientNumberLabel);
             this.Controls.Add(this.TestBtn);
             this.Name = "Form1";
@@ -78,6 +124,10 @@
         private System.Windows.Forms.Button TestBtn;
         private System.Windows.Forms.Timer UpdaterTimer;
         private System.Windows.Forms.Label ClientNumberLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label GamesDoneLbl;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox shutdownCbox;
     }
 }
 

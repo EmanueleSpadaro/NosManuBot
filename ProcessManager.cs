@@ -167,7 +167,7 @@ namespace ManuBot
         #region Processes Variables for easy maintainability 
 
         private const string ClientProcessName = "NostaleClientX"; //.exe not included
-        public static int Delay { get => 500; }
+        public static int Delay { get => 550; }
 
         #endregion
 
